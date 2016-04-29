@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Alien Rescue</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+    </head>
+    <body ng-app="alienRescueApp">
+        <div ng-controller="SolarSystemDBController">
+          <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Alien Rescue</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid" id="main">
+            <div class="row">
+
+    <!-- Begin Solar System Database -->
+                <div class="col-md-offset-1 col-md-4 solar-system-db draggable">
+                    <div class ="row">
+                   <div class="window-title">
+                    <nav class="navbar navbar-default">
+                      <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class ="navbar-brand" href="solarsystemdb.html">Solar System Database</a>
+                        </div>
+
+
+                      </div>
+                    </nav>
+                  </div>
+                  </div>
+
+  <!-- Navigation Menu Begin -->
+       <div class="row">
+         <div class="col-xs-12" ng-controller="SSDBNavCtrl">
+
+               <ul class="list-unstyled list-inline">
+                <li class="col-xs-1 col-xs-offset-1">
+                  <a class="active" href="{{ nav.href1 }}"><img ng-src="{{ nav.imgSun }}" class="img-responsive" alt="{{ nav.altSun }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href2 }}"><img ng-src="{{ nav.imgMercury }}" class="img-responsive" alt="{{ nav.altMercury }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href3 }}"><img ng-src="{{ nav.imgVenus }}" class="img-responsive" alt="{{ nav.altVenus }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href4 }}"><img ng-src="{{ nav.imgEarth }}" class="img-responsive" alt="{{ nav.altEarth }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href5 }}"><img ng-src="{{ nav.imgMars }}" class="img-responsive" alt="{{ nav.altMars }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href6 }}"><img ng-src="{{ nav.imgJupiter }}" class="img-responsive" alt="{{ nav.altJupiter }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href7 }}"><img ng-src="{{ nav.imgSaturn }}" class="img-responsive" alt="{{ nav.altSaturn }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href8 }}"><img ng-src="{{ nav.imgUranus }}" class="img-responsive" alt="{{ nav.altUranus }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href9 }}"><img ng-src="{{ nav.imgNeptune }}" class="img-responsive" alt="{{ nav.altNeptune }}"></a>
+                </li>
+                <li class="col-xs-1">
+                  <a href="{{ nav.href10 }}"><img ng-src="{{ nav.imgPluto }}" class="img-responsive" alt="{{ nav.altPluto }}"></a>
+                </li>
+
+               </ul>
+         </div>
+       </div><!-- Navigation Menu End -->
+
+<!-- Content Begin -->
+                    <!-- Tab navigation -->
+<ul class="nav nav-tabs">
+ <li role="presentation" class="active"><a data-toggle="tab" href="#jupiter">{{ database.jupiter.tabTitle1 }}</a></li>
+ <li role="presentation"><a data-toggle="tab" href="#jupiter-lo">{{ database.jupiter.tabTitle2 }}</a></li>
+ <li role="presentation"><a data-toggle="tab" href="#jupiter-europa">{{ database.jupiter.tabTitle3 }}</a></li>
+ <li role="presentation"><a data-toggle="tab" href="#jupiter-ganymede">{{ database.jupiter.tabTitle4 }}</a></li>
+ <li role="presentation"><a data-toggle="tab" href="#jupiter-callisto">{{ database.jupiter.tabTitle5 }}</a></li>
+</ul>
+
+<!-- Tab 1 Jupiter -->
+    <div class="tab-content">
+     <div id="jupiter" class="tab-pane fade in active">
+        <!-- Carousel Jupiter -->
+    <div id="carousel-jupiter-ssdb" class="carousel slide" data-ride="carousel" data-interval="false">
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-jupiter-ssdb" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-jupiter-ssdb" data-slide-to="1"></li>
+    <li data-target="#carousel-jupiter-ssdb" data-slide-to="2"></li>
+    <li data-target="#carousel-jupiter-ssdb" data-slide-to="3"></li>
+    <li data-target="#carousel-jupiter-ssdb" data-slide-to="4"></li>
+    <li data-target="#carousel-jupiter-ssdb" data-slide-to="5"></li>
+    <li data-target="#carousel-jupiter-ssdb" data-slide-to="6"></li>
+    <li data-target="#carousel-jupiter-ssdb" data-slide-to="7"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+<div class="tab-content">
+ <div id="jupiter" class="tab-pane fade in active">
+  <div id="jupiter-carousel" class="carousel slide">
+   <div class="carousel-inner" role="listbox">
+     <!-- Slide 1 -->
+    <div class="item active">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.jupiter.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.jupiter.slideImg1 }}" alt=""></div>
+        <div class="col-xs-7">
+         <p>{{ database.jupiter.slideContent1 }}</p>
+        </div>
+      </div>
+
+    </div>
+      <!-- Slide 2 -->
+     <div class="item">
+      <div class="row">
+       <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.jupiter.slideTitle2 }}</h3></div>
+      </div>
+    <div class="row">
+        <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.jupiter.slideImg2 }}" alt=""></div>
+       <div class="col-xs-7">
+        <p>{{ database.jupiter.slideContent2 }}</p>
+       </div>
+    </div>
+      <div class="carousel-caption">
+
+      </div>
+     </div>
+   <!-- Slide 3 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.jupiter.slideTitle2 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.jupiter.slideImg3 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.jupiter.slideContent3 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 4 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.jupiter.slideTitle2 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.jupiter.slideImg4 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.jupiter.slideContent4 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 5 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.jupiter.slideTitle2 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.jupiter.slideImg5 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.jupiter.slideContent5 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 6 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.jupiter.slideTitle2 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.jupiter.slideImg6 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.jupiter.slideContent6 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 7 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.jupiter.slideTitle2 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.jupiter.slideImg7 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.jupiter.slideContent7 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 8 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.jupiter.slideTitle2 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.jupiter.slideImg8 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.jupiter.slideContent8 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-jupiter-ssdb" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-jupiter-ssdb" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+     </div>
+
+<!-- Tab 2 lo-->
+      <div id="jupiter-lo" class="tab-pane fade">
+        <!-- Carousel lo -->
+<div id="carousel-lo-ssdb" class="carousel slide" data-ride="carousel" data-interval="false">
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-lo-ssdb" data-slide-to="0" active></li>
+    <li data-target="#carousel-lo-ssdb" data-slide-to="1"></li>
+    <li data-target="#carousel-lo-ssdb" data-slide-to="2"></li>
+    <li data-target="#carousel-lo-ssdb" data-slide-to="3"></li>
+    <li data-target="#carousel-lo-ssdb" data-slide-to="4"></li>
+    <li data-target="#carousel-lo-ssdb" data-slide-to="5"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+<div class="tab-content">
+ <div class="tab-pane fade in active">
+  <div id="lo-carousel" class="carousel slide">
+   <div class="carousel-inner" role="listbox">
+     <!-- Slide 1 -->
+    <div class="item active">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.lo.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.lo.slideImg1 }}" alt=""></div>
+                             <div class="col-xs-7">
+        <p>{{ database.lo.slideContent1 }}</p>
+          </div>
+      </div>
+
+    </div>
+      <!-- Slide 2 -->
+    <div class="item">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.lo.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.lo.slideImg2 }}" alt=""></div>
+                             <div class="col-xs-7">
+       <p>{{ database.lo.slideContent2 }}</p>
+          </div>
+      </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 3 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.lo.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.lo.slideImg3 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.lo.slideContent3 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 4 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.lo.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.lo.slideImg4 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.lo.slideContent4 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 5 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.lo.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.lo.slideImg5 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.lo.slideContent5 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 6 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.lo.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.lo.slideImg6 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.lo.slideContent6 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-lo-ssdb" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-lo-ssdb" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      </div>
+
+<!-- Tab 3 Europa-->
+      <div id="jupiter-europa" class="tab-pane fade">
+        <!-- Carousel Europa -->
+<div id="carousel-europa-ssdb" class="carousel slide" data-ride="carousel" data-interval="false">
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-europa-ssdb" data-slide-to="0" active></li>
+    <li data-target="#carousel-europa-ssdb" data-slide-to="1"></li>
+    <li data-target="#carousel-europa-ssdb" data-slide-to="2"></li>
+    <li data-target="#carousel-europa-ssdb" data-slide-to="3"></li>
+    <li data-target="#carousel-europa-ssdb" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+<div class="tab-content">
+ <div class="tab-pane fade in active">
+  <div id="europa-carousel" class="carousel slide">
+   <div class="carousel-inner" role="listbox">
+     <!-- Slide 1 -->
+    <div class="item active">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.europa.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.europa.slideImg1 }}" alt=""></div>
+                             <div class="col-xs-7">
+        <p>{{ database.europa.slideContent1 }}</p>
+          </div>
+      </div>
+
+    </div>
+      <!-- Slide 2 -->
+    <div class="item">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.europa.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.europa.slideImg2 }}" alt=""></div>
+                             <div class="col-xs-7">
+       <p>{{ database.europa.slideContent2 }}</p>
+          </div>
+      </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 3 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.europa.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.europa.slideImg3 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.europa.slideContent3 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 4 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.europa.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.europa.slideImg4 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.europa.slideContent4 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 5 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.europa.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.europa.slideImg5 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.europa.slideContent5 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-europa-ssdb" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-europa-ssdb" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      </div>
+<!-- Tab 4 Ganymede-->
+      <div id="jupiter-ganymede" class="tab-pane fade">
+        <!-- Carousel Ganymede -->
+<div id="carousel-ganymede-ssdb" class="carousel slide" data-ride="carousel" data-interval="false">
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-ganymede-ssdb" data-slide-to="0" active></li>
+    <li data-target="#carousel-ganymede-ssdb" data-slide-to="1"></li>
+    <li data-target="#carousel-ganymede-ssdb" data-slide-to="2"></li>
+    <li data-target="#carousel-ganymede-ssdb" data-slide-to="3"></li>
+    <li data-target="#carousel-ganymede-ssdb" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+<div class="tab-content">
+ <div class="tab-pane fade in active">
+  <div id="ganymede-carousel" class="carousel slide">
+   <div class="carousel-inner" role="listbox">
+     <!-- Slide 1 -->
+    <div class="item active">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.ganymede.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.ganymede.slideImg1 }}" alt=""></div>
+                             <div class="col-xs-7">
+        <p>{{ database.ganymede.slideContent1 }}</p>
+          </div>
+      </div>
+
+    </div>
+      <!-- Slide 2 -->
+    <div class="item">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.ganymede.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.ganymede.slideImg2 }}" alt=""></div>
+                             <div class="col-xs-7">
+       <p>{{ database.ganymede.slideContent2 }}</p>
+          </div>
+      </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 3 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.ganymede.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.ganymede.slideImg3 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.ganymede.slideContent3 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 4 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.ganymede.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.ganymede.slideImg4 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.ganymede.slideContent4 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 5 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.ganymede.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.ganymede.slideImg5 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.ganymede.slideContent5 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-ganymede-ssdb" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-ganymede-ssdb" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      </div>
+
+<!-- Tab 5 Callisto-->
+      <div id="jupiter-callisto" class="tab-pane fade">
+        <!-- Carousel Callisto -->
+<div id="carousel-callisto-ssdb" class="carousel slide" data-ride="carousel" data-interval="false">
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-callisto-ssdb" data-slide-to="0" active></li>
+    <li data-target="#carousel-callisto-ssdb" data-slide-to="1"></li>
+    <li data-target="#carousel-callisto-ssdb" data-slide-to="2"></li>
+    <li data-target="#carousel-callisto-ssdb" data-slide-to="3"></li>
+    <li data-target="#carousel-callisto-ssdb" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+<div class="tab-content">
+ <div class="tab-pane fade in active">
+  <div id="callisto-carousel" class="carousel slide">
+   <div class="carousel-inner" role="listbox">
+     <!-- Slide 1 -->
+    <div class="item active">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.callisto.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.callisto.slideImg1 }}" alt=""></div>
+                             <div class="col-xs-7">
+        <p>{{ database.callisto.slideContent1 }}</p>
+          </div>
+      </div>
+
+    </div>
+      <!-- Slide 2 -->
+    <div class="item">
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.callisto.slideTitle1 }}</h3></div>
+     </div>
+      <div class="row">
+       <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.callisto.slideImg2 }}" alt=""></div>
+                             <div class="col-xs-7">
+       <p>{{ database.callisto.slideContent2 }}</p>
+          </div>
+      </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 3 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.callisto.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.callisto.slideImg3 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.callisto.slideContent3 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 4 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.callisto.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.callisto.slideImg4 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.callisto.slideContent4 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <!-- Slide 5 -->
+    <div class="item">
+      <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center"><h3>{{ database.callisto.slideTitle1 }}</h3></div>
+                        </div>
+                            <div class="row">
+                             <div class="col-xs-3 col-xs-offset-1"><img class="col-xs-12" ng-src="{{ database.callisto.slideImg5 }}" alt=""></div>
+                             <div class="col-xs-7">
+                                <p>{{ database.callisto.slideContent5 }}</p>
+                                </div>
+                            </div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-callisto-ssdb" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-callisto-ssdb" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      </div>
+     </div>
+<!-- Content End -->
+
+                    </div>
+                </div>
+
+                <!-- End Solar System Database -->
+
+            </div>
+          </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/threejs/r69/three.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/utils/Draggable.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src ="../Alien-Rescue/assets/js/solarsystemdb/ssdb.js"></script>
+    </body>
+</html>
